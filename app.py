@@ -6,7 +6,6 @@ app = Flask(__name__)
 movies_list = pickle.load(open('movies.pkl', 'rb'))  #get movies list
 movies = pd.DataFrame(movies_list) #convert it to panda dataframe
 similarity = pickle.load(open('similarity.pkl', 'rb'))
-id_available = 'tt0468569' in movies['imdbID'].values
 
 def recommend(movie):
     recommendations = []
